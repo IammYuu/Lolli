@@ -1,17 +1,19 @@
 {
-  "name": "bot",
+  "name": "Loli",
   "version": "1.0.0",
   "description": "",
   "main": "loli.js",
-  "dependencies": {
-    "discord.js": "^11.4.2",
-  },
-  "devDependencies": {},
   "scripts": {
-    "start": "node loli.js",
-    "test": "node loli.js"
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.12.0"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "ImDiogo912",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "discordjs/discord.js#11.5-dev",
+  }
 }
