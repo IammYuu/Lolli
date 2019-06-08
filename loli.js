@@ -1,5 +1,5 @@
-const Discord = require("discord.js");
-const loli = new Discord.Client();
+const Loli = require("discord.js");
+const loli = new Loli.Client();
 const config = require("./config.json");
 
 client.on("guildMemberAdd", function(member) {
@@ -24,7 +24,7 @@ let status = [
 
 
 loli.on('ready', () => {
-  console.log( `Carregado...! Olá mundo! Estou em ${client.guilds.size} servers com ${client.users.size} users` );
+  console.log( `Carregado...! Olá mundo! Estou em ${loli.guilds.size} servers com ${loli.users.size} users` );
 
   function setStatus() {
       let randomStatus = status[Math.floor(Math.random() * status.length)];
