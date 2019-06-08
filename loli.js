@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
+const loli = new Discord.Client();
 const config = require("./config.json");
 
 client.on("guildMemberAdd", function(member) {
-  let role = member.guild.roles.find("name", "🎧 Membro");
+  let role = member.guild.roles.find("name", "🎧 Membro"); //nome do cargo do autorole
   member.addRole(role).catch(console.error);
 });
 
@@ -23,7 +23,7 @@ let status = [
 //WATCHING = ASSISTINDO
 
 
-client.on('ready', () => {
+loli.on('ready', () => {
   console.log( `Carregado...! Olá mundo! Estou em ${client.guilds.size} servers com ${client.users.size} users` );
 
   function setStatus() {
@@ -34,7 +34,7 @@ client.on('ready', () => {
   setStatus();
   setInterval(() => setStatus(), 10000); //{1000/1s}\{10000/10s}\{100000/1m}
 });
-client.on("message", async message => {
+loli.on("message", async message => {
 
     if (message.author.bot) return;
     if(message.content.indexOf(config.prefix) !== 0) return;
@@ -44,17 +44,8 @@ client.on("message", async message => {
     try {
       let commandFile = require(`./commands/${command}.js`);
       commandFile.run(client, message, args);
-    } catch (err) {
-      // let o = new Discord.RichEmbed()
-      // .setTitle("ERROR")
-      // .setColor("#d50000")
-      // .setDescription("Command is invalid or an error has occurred.")
-      // .setTimestamp()
-      // message.channel.send(o)
-  
-    //console.log(err)
     }
 
   });
   
-client.login(config.token);
+loli.login(process.env.TOKEN);
