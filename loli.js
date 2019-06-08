@@ -3,7 +3,7 @@ const loli = new Loli.Client();
 const config = require("./config.json");
 
 client.on("guildMemberAdd", function(member) {
-  let role = member.guild.roles.find("name", "🎧 Membro"); //nome do cargo do autorole
+  let role = member.guild.roles.find("name", "🎧 Membro");
   member.addRole(role).catch(console.error);
 });
 
