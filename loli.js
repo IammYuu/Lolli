@@ -13,7 +13,7 @@ let status = [
   {name: `Fortnite`, type: 'PLAYING'},
   {name: `Animes`, type: 'WATCHING'},
   {name: `FIFA 19`, type: 'PLAYING'},
- {name: 'Desenvolvido por: Yuu#0069', type: 'STREAMING', url: 'https://www.twitch.tv/yooooyuu'},
+ {name: 'Brother, o meu criador é autista', type: 'STREAMING', url: 'https://www.twitch.tv/yooooyuu'},
 
 ];
 
